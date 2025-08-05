@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor - Crisceline Abella</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#4A7BA7',
+                        'secondary-blue': '#6798C0',
+                        'text-dark': '#2C3E50',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+        function changePDF(pdfFile) {
+            const iframe = document.getElementById('pdfViewer');
+            iframe.src = pdfFile;
+        }
+    </script>
+</head>
+<body class="font-poppins text-text-dark bg-white">
+
+    <!-- Navigation -->
+   <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 py-4 shadow-sm">
+    <div class="max-w-6xl mx-auto px-5">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-secondary-blue">Student Performance Predictor</a>
+            <ul class="flex space-x-10 items-center">
+                <li>
+                    <a href="#" onclick="changePDF('../assets/stdPer/LandingPage.pdf')" class="text-text-dark hover:text-secondary-blue">Landing Page</a>
+                </li>
+                <li>
+                    <a href="#" onclick="changePDF('../assets/stdPer/HomePage.pdf')" class="text-text-dark hover:text-secondary-blue">Home Page</a>
+                </li>
+
+                <!-- Predictors Dropdown -->
+                <li class="relative group">
+                    <button class="text-text-dark hover:text-secondary-blue focus:outline-none">
+                        Predictors ▼
+                    </button>
+                    <ul class="absolute left-0 mt-2 w-56 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-200">
+                        <li><a href="#" onclick="changePDF('../assets/stdPer/AdminPanel(Models)/CourseRecommendation.pdf')" class="block px-4 py-2 hover:bg-gray-100">Course Recommendation</a></li>
+                        <li><a href="#" onclick="changePDF('../assets/stdPer/AdminPanel(Models)/CoursePrediction.pdf')" class="block px-4 py-2 hover:bg-gray-100">Course Prediction</a></li>
+                        <li><a href="#" onclick="changePDF('../assets/stdPer/AdminPanel(Models)/DropOutRisk.pdf')" class="block px-4 py-2 hover:bg-gray-100">Dropout Risk</a></li>
+                        <li><a href="#" onclick="changePDF('../assets/stdPer/AdminPanel(Models)/InstructorRecommendation.pdf')" class="block px-4 py-2 hover:bg-gray-100">Instructor Recommendation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- PDF Viewer Section -->
+    <section class="py-12 bg-white mt-16">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="bg-gray-100 rounded-3xl shadow-2xl overflow-hidden">
+                <!-- PDF Viewer Container -->
+                <iframe id="pdfViewer" src="../assets/stdPer/LandingPage.pdf" width="100%" height="800px" style="border: none; border-radius: 8px;" title="PDF Viewer"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-white/80 text-center py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <p>&copy; Crisceline Abella | Portofolio</p>
+        </div>
+    </footer>
+
+</body>
+</html>

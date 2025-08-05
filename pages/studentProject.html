@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Sales Analytics - Crisceline Abella</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-yellow': '#FDC921',
+                        'secondary-yellow': '#FDD85D',
+                        'primary-blue': '#99D6EA',
+                        'secondary-blue': '#6798C0',
+                        'dark-blue': '#4A7BA7',
+                        'text-dark': '#2C3E50',
+                        'text-light': '#34495E',
+                        'bg-cream': '#FFFBF0'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fadeInUp': 'fadeInUp 0.8s ease-out',
+                        'slideInLeft': 'slideInLeft 0.8s ease-out',
+                        'slideInRight': 'slideInRight 0.8s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        fadeInUp: {
+                            'from': { opacity: '0', transform: 'translateY(30px)' },
+                            'to': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideInLeft: {
+                            'from': { opacity: '0', transform: 'translateX(-50px)' },
+                            'to': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInRight: {
+                            'from': { opacity: '0', transform: 'translateX(50px)' },
+                            'to': { opacity: '1', transform: 'translateX(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins text-text-dark overflow-x-hidden bg-white">
+    <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 py-4 border-b border-blue-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-secondary-blue hover:text-primary-yellow transition-all duration-300 hover:scale-105">
+                    Crisceline Abella Ranggen
+                </a>
+                <ul class="hidden md:flex space-x-10">
+                    <li><a href="../index.html#home" class="nav-link text-text-light font-medium hover:text-secondary-blue transition-all duration-300 relative py-2 hover:-translate-y-0.5 group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-yellow to-secondary-yellow transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a></li>
+                    <li><a href="../index.html#about" class="nav-link text-text-light font-medium hover:text-secondary-blue transition-all duration-300 relative py-2 hover:-translate-y-0.5 group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-yellow to-secondary-yellow transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a></li>
+                    <li><a href="../index.html#portfolio" class="nav-link text-text-light font-medium hover:text-secondary-blue transition-all duration-300 relative py-2 hover:-translate-y-0.5 group">
+                        Portfolio
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-yellow to-secondary-yellow transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a></li>
+                    <li><a href="../index.html#contact" class="nav-link text-text-light font-medium hover:text-secondary-blue transition-all duration-300 relative py-2 hover:-translate-y-0.5 group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-yellow to-secondary-yellow transition-all duration-300 group-hover:w-full rounded-full"></span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-gradient-to-br from-bg-cream via-white to-blue-50 flex items-center relative pt-32 pb-16 overflow-hidden">
+        <!-- Floating Shapes -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute w-20 h-20 bg-gradient-to-br from-primary-yellow to-secondary-yellow rounded-full opacity-10 top-1/5 left-1/12 animate-float"></div>
+            <div class="absolute w-30 h-30 bg-gradient-to-br from-primary-yellow to-secondary-yellow rounded-full opacity-10 top-3/5 right-1/12 animate-float" style="animation-delay: 2s"></div>
+            <div class="absolute w-15 h-15 bg-gradient-to-br from-primary-yellow to-secondary-yellow rounded-full opacity-10 top-4/5 left-1/5 animate-float" style="animation-delay: 4s"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-5 relative z-10">
+            <div class="text-center animate-fadeInUp">
+                <!-- Back Button -->
+                <a href="../index.html#portfolio" class="inline-flex items-center text-secondary-blue hover:text-primary-yellow transition-all duration-300 mb-8 group">
+                    <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Back to Portfolio
+                </a>
+                
+                <!-- Project Category -->
+                <div class="inline-block bg-primary-yellow/20 text-primary-yellow px-6 py-3 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+                    Machine Learning
+                </div>
+                
+                <!-- Project Title -->
+                <h1 class="text-6xl font-bold text-text-dark mb-6 leading-tight">STUDENT PERFORMANCE PREDICTOR</h1>
+                <p class="text-2xl text-text-light mb-12 max-w-3xl mx-auto leading-relaxed">
+                    An interactive dashboard that transforms complex sales data into actionable insights, featuring real-time updates, predictive analytics, and automated reporting.
+                </p>
+                
+                <!-- Quick Actions -->
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="../pages/studentSS.html" class="bg-gradient-to-r from-secondary-blue to-primary-blue text-white px-8 py-4 font-semibold rounded-full shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                        View Screenshots
+                    </a>
+                    <a href="https://github.com/abrgnnn/student-performance-predictor" class="border-2 border-secondary-blue text-secondary-blue px-8 py-4 font-semibold rounded-full hover:bg-secondary-blue hover:text-white transition-all duration-300">
+                        <svg class="w-5 h-5 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="animate-slideInLeft">
+                    <h2 class="text-4xl font-bold text-text-dark mb-8">Project Overview</h2>
+                    <p class="text-lg text-text-light mb-6 leading-relaxed">
+                        The Student Recommendation Web App was developed as a final-year project to explore how data-driven insights can assist students in selecting courses that align with their strengths and academic history. Many students face difficulty identifying subjects in which they are most likely to excel, often leading to less-than-optimal academic outcomes.
+                    </p>
+                    <p class="text-lg text-text-light mb-8 leading-relaxed">
+                        This prototype leverages machine learning models—including linear regression and association rule mining (Apriori)—to analyze historical enrollment and grade data from a mock database, predict future GPA, and recommend suitable courses. Built with Django, Python, and PostgreSQL, the system features an intuitive web interface with dynamic dashboards and input forms, demonstrating how predictive analytics can enhance academic planning and student success when applied to real-world data.
+                    </p>
+                </div>
+                <div class="animate-slideInRight">
+    <!-- Dashboard Preview with Image -->
+    <div class="relative">
+    <!-- Image Section with Thin Border -->
+    <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-2 rounded-3xl">
+        <img src="../assets/preview.png" alt="Preview" class="w-full h-auto rounded-xl border-2 border-slate-300">
+    </div>
+</div>
+
+</div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-24 bg-bg-cream">
+    
+        <!-- Tech Stack -->
+        <section class="py-24 bg-bg-cream">
+    <div class="max-w-6xl mx-auto px-5">
+        <h2 class="text-4xl font-bold text-center text-text-dark mb-4">Technical Implementation</h2>
+        <p class="text-center text-text-light mb-16"></p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Backend & Database -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-blue-100">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6">
+                    PY
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-text-dark">Backend & Database</h3>
+                <ul class="text-text-light space-y-2">
+                    <li>• Django (Python)</li>
+                    <li>• PostgreSQL with Django ORM</li>
+                </ul>
+            </div>
+
+            <!-- Frontend & Visualization -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-blue-100">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6">
+                    UI
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-text-dark">Frontend & Visualization</h3>
+                <ul class="text-text-light space-y-2">
+                    <li>• Django templating system</li>
+                    <li>• Matplotlib & Seaborn for charts</li>
+                </ul>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-blue-100">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6">
+                    ML
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-text-dark">Machine Learning</h3>
+                <ul class="text-text-light space-y-2">
+    <li>• Linear Regression</li>
+    <li>• Random Forest (Regressor & Classifier)</li>
+    <li>• K-Means Clustering</li>
+    <li>• Apriori Algorithm (Association Rule Mining)</li>
+</ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </div>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-white/80 text-center py-12">
+        <div class="max-w-6xl mx-auto px-5">
+            <p>&copy;  Crisceline Abella | Portofolio </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
