@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery - Your Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#4A7BA7',
+                        'secondary-blue': '#6798C0',
+                        'text-dark': '#2C3E50',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+        let currentImageIndex = 0;
+        const workExperienceImages = [
+            {
+                src: '/webPorto/assets/work/internship1.jpg',
+                caption: 'Software Development Intern at Tech Corp'
+            },
+            {
+                src: '/webPorto/assets/work/internship2.jpg',
+                caption: 'Full Stack Developer at StartupXYZ'
+            },
+            {
+                src: '/webPorto/assets/work/project1.jpg',
+                caption: 'Lead Developer on E-commerce Platform'
+            },
+            {
+                src: '/webPorto/assets/work/project2.jpg',
+                caption: 'UI/UX Designer for Mobile Application'
+            }
+        ];
+
+        function changePDF(pdfFile) {
+            const iframe = document.getElementById('pdfViewer');
+            const imageSlider = document.getElementById('imageSlider');
+            
+            // Hide image slider and show PDF viewer
+            imageSlider.style.display = 'none';
+            iframe.style.display = 'block';
+            iframe.src = pdfFile;
+        }
+
+        function showWorkExperience() {
+            const iframe = document.getElementById('pdfViewer');
+            const imageSlider = document.getElementById('imageSlider');
+            
+            // Hide PDF viewer and show image slider
+            iframe.style.display = 'none';
+            imageSlider.style.display = 'block';
+            
+            // Reset to first image
+            currentImageIndex = 0;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const image = document.getElementById('sliderImage');
+            const caption = document.getElementById('sliderCaption');
+            const counter = document.getElementById('imageCounter');
+            
+            image.src = workExperienceImages[currentImageIndex].src;
+            caption.textContent = workExperienceImages[currentImageIndex].caption;
+            counter.textContent = `${currentImageIndex + 1} / ${workExperienceImages.length}`;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % workExperienceImages.length;
+            updateSlider();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + workExperienceImages.length) % workExperienceImages.length;
+            updateSlider();
+        }
+
+        // Initialize slider when page loads
+        window.addEventListener('load', function() {
+            updateSlider();
+        });
+    </script>
+</head>
+<body class="font-poppins text-text-dark bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 py-4 shadow-sm">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-secondary-blue">Portfolio Gallery</a>
+                <ul class="flex space-x-10 items-center">
+                    <!-- Work Experience Dropdown -->
+                    <li class="relative group">
+                        <button class="text-text-dark hover:text-secondary-blue focus:outline-none">
+                            Work Experience ▼
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-200">
+                            <li><a href="#" onclick="showWorkExperience()" class="block px-4 py-2 hover:bg-gray-100">View Gallery</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Competitions Dropdown -->
+                    <li class="relative group">
+                        <button class="text-text-dark hover:text-secondary-blue focus:outline-none">
+                            Competitions ▼
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-200">
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/hackathon2024.pdf')" class="block px-4 py-2 hover:bg-gray-100">Hackathon 2024</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/codingcompetition.pdf')" class="block px-4 py-2 hover:bg-gray-100">Coding Competition</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/designchallenge.pdf')" class="block px-4 py-2 hover:bg-gray-100">Design Challenge</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Certifications Dropdown -->
+                    <li class="relative group">
+                        <button class="text-text-dark hover:text-secondary-blue focus:outline-none">
+                            Certifications ▼
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-200">
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/aws-cert.pdf')" class="block px-4 py-2 hover:bg-gray-100">AWS Certification</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/google-cert.pdf')" class="block px-4 py-2 hover:bg-gray-100">Google Cloud Cert</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/microsoft-cert.pdf')" class="block px-4 py-2 hover:bg-gray-100">Microsoft Azure</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Languages Dropdown -->
+                    <li class="relative group">
+                        <button class="text-text-dark hover:text-secondary-blue focus:outline-none">
+                            Languages ▼
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-200">
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/chinese.pdf')" class="block px-4 py-2 hover:bg-gray-100">Chinese</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/japanese.pdf')" class="block px-4 py-2 hover:bg-gray-100">Japanese</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/english.pdf')" class="block px-4 py-2 hover:bg-gray-100">English</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Events Dropdown -->
+                    <li class="relative group">
+                        <button class="text-text-dark hover:text-secondary-blue focus:outline-none">
+                            Events ▼
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white border rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-200">
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/techconference2024.pdf')" class="block px-4 py-2 hover:bg-gray-100">Tech Conference 2024</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/workshop.pdf')" class="block px-4 py-2 hover:bg-gray-100">Workshop Speaker</a></li>
+                            <li><a href="#" onclick="changePDF('/webPorto/assets/networking.pdf')" class="block px-4 py-2 hover:bg-gray-100">Networking Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="py-12 bg-white mt-16">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="bg-gray-100 rounded-3xl shadow-2xl overflow-hidden">
+                
+                <!-- Image Slider for Work Experience -->
+                <div id="imageSlider" class="relative p-8">
+                    <div class="flex items-center justify-center mb-6">
+                        <h2 class="text-3xl font-bold text-text-dark">Work Experience Gallery</h2>
+                    </div>
+                    
+                    <div class="relative max-w-4xl mx-auto">
+                        <!-- Main Image -->
+                        <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <img id="sliderImage" src="/webPorto/assets/work/internship1.jpg" alt="Work Experience" class="w-full h-96 object-cover">
+                            
+                            <!-- Navigation Arrows -->
+                            <button onclick="prevImage()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-text-dark rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-200">
+                                ‹
+                            </button>
+                            <button onclick="nextImage()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-text-dark rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-200">
+                                ›
+                            </button>
+                            
+                            <!-- Image Counter -->
+                            <div class="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                                <span id="imageCounter">1 / 4</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Caption -->
+                        <div class="mt-6 text-center">
+                            <p id="sliderCaption" class="text-lg text-text-dark font-medium">Software Development Intern at Tech Corp</p>
+                        </div>
+                        
+                        <!-- Thumbnail Navigation -->
+                        <div class="flex justify-center mt-6 space-x-2">
+                            <button onclick="currentImageIndex = 0; updateSlider()" class="w-3 h-3 rounded-full bg-secondary-blue transition-all duration-200"></button>
+                            <button onclick="currentImageIndex = 1; updateSlider()" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-secondary-blue transition-all duration-200"></button>
+                            <button onclick="currentImageIndex = 2; updateSlider()" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-secondary-blue transition-all duration-200"></button>
+                            <button onclick="currentImageIndex = 3; updateSlider()" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-secondary-blue transition-all duration-200"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF Viewer Container -->
+                <iframe id="pdfViewer" src="" width="100%" height="800px" style="border: none; border-radius: 8px; display: none;" title="PDF Viewer"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark text-white/80 text-center py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <p>&copy; Your Name | Portfolio Gallery</p>
+        </div>
+    </footer>
+
+</body>
+</html>
