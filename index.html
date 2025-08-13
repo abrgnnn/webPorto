@@ -61,7 +61,7 @@
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-yellow to-secondary-yellow transition-all duration-300 group-hover:w-full rounded-full"></span>
                     </a></li>
                     <li><a href="/webPorto/#portfolio" class="nav-link text-text-light font-medium hover:text-secondary-blue transition-all duration-300 relative py-2 hover:-translate-y-0.5 group">
-                        Portfolio
+                        Projects
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-yellow to-secondary-yellow transition-all duration-300 group-hover:w-full rounded-full"></span>
                     </a></li>
                     <li><a href="/webPorto/#contact" class="nav-link text-text-light font-medium hover:text-secondary-blue transition-all duration-300 relative py-2 hover:-translate-y-0.5 group">
@@ -106,6 +106,85 @@
     </div>
 </section>
 
+    <!-- Portfolio Section -->
+    <section class="py-24 bg-white" id="portfolio">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-5xl font-bold text-center text-text-dark mb-16 relative">
+                Projects
+                <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary-yellow to-secondary-yellow rounded-full"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                 <!-- Student Predictor -->
+                <a href="/webPorto/pages/studentProject.html">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
+                        <img src="assets/preview.png" alt="">
+                    </div>
+                    <div class="p-10">
+                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
+                            Machine Learning
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">Student Performance Predictor</h3>
+                        <p class="text-text-light leading-relaxed">
+                           Django-based academic analytics prototype with ML-driven course prediction, recommendations, and dropout-risk analysis via interactive dashboards. 
+                        </p>
+                    </div>
+                </div> </a>
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
+                        <img src="assets/previewEn.jpg" alt="">
+                    </div>
+                    <div class="p-10">
+                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
+                            Data Science
+                        </div>
+                         <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
+                            Machine Learning
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">Kalbio Engineering Dashboard</h3>
+                        <p class="text-text-light leading-relaxed">
+                          Full-stack engineering dashboard with ML-powered performance monitoring, energy forecasting, anomaly detection, and maintenance management using React.js, Django, and PostgreSQL.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
+                   <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
+    <img src="assets/previewAndro.png" alt="" class="object-contain h-full">
+</div>
+
+
+                    <div class="p-10">
+                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
+                        Mobile App</div>
+                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">PUMA IS App</h3>
+                        <p class="text-text-light leading-relaxed">
+                            Android app for campus event management with push notifications and responsive XML UI, built using Kotlin and Firebase.
+                        </p>
+                    </div>
+                </div>
+    
+                 <a href="/webPorto/pages/vehicleDashboard.html">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
+                   <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
+                        <img src="assets/previewDashboard.png" alt="" class="object-contain h-full">
+                    </div>
+
+
+                    <div class="p-10">
+                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
+                        Data Visualization</div>
+                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">Vehicle Sales Insight Dashboard</h3>
+                        <p class="text-text-light leading-relaxed">
+                            Interactive Looker Studio dashboard for vehicle sales insights with regional maps, trend analysis, customer rankings, revenue shares, deal size distributions, and KPI-driven performance evaluation.
+                        </p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+      <!-- About Section -->
  <section class="py-24 bg-white" id="about">
         <div class="max-w-6xl mx-auto px-5">
             <h2 class="text-5xl font-bold text-center text-text-dark mb-12 relative">About Me</h2>
@@ -451,86 +530,6 @@ languages: {
         });
     </script>
 
-
-
-    <!-- Portfolio Section -->
-    <section class="py-24 bg-white" id="portfolio">
-        <div class="max-w-6xl mx-auto px-5">
-            <h2 class="text-5xl font-bold text-center text-text-dark mb-16 relative">
-                Projects
-                <span class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary-yellow to-secondary-yellow rounded-full"></span>
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                 <!-- Student Predictor -->
-                <a href="/webPorto/pages/studentProject.html">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
-                        <img src="assets/preview.png" alt="">
-                    </div>
-                    <div class="p-10">
-                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
-                            Machine Learning
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">Student Performance Predictor</h3>
-                        <p class="text-text-light leading-relaxed">
-                           Django-based academic analytics prototype with ML-driven course prediction, recommendations, and dropout-risk analysis via interactive dashboards. 
-                        </p>
-                    </div>
-                </div> </a>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
-                    <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
-                        <img src="assets/previewEn.jpg" alt="">
-                    </div>
-                    <div class="p-10">
-                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
-                            Data Science
-                        </div>
-                         <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
-                            Machine Learning
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">Kalbio Engineering Dashboard</h3>
-                        <p class="text-text-light leading-relaxed">
-                          Full-stack engineering dashboard with ML-powered performance monitoring, energy forecasting, anomaly detection, and maintenance management using React.js, Django, and PostgreSQL.
-                        </p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
-                   <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
-    <img src="assets/previewAndro.png" alt="" class="object-contain h-full">
-</div>
-
-
-                    <div class="p-10">
-                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
-                        Mobile App</div>
-                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">PUMA IS App</h3>
-                        <p class="text-text-light leading-relaxed">
-                            Android app for campus event management with push notifications and responsive XML UI, built using Kotlin and Firebase.
-                        </p>
-                    </div>
-                </div>
-    
-                 <a href="/webPorto/pages/vehicleDashboard.html">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-blue-100 hover:-translate-y-4 hover:shadow-2xl transition-all duration-300">
-                   <div class="w-full h-64 bg-gradient-to-br from-primary-blue to-secondary-blue flex items-center justify-center text-white text-xl font-semibold">
-                        <img src="assets/previewDashboard.png" alt="" class="object-contain h-full">
-                    </div>
-
-
-                    <div class="p-10">
-                        <div class="inline-block bg-primary-yellow/10 text-primary-yellow px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
-                        Data Visualization</div>
-                        <h3 class="text-2xl font-semibold mb-4 text-text-dark">Vehicle Sales Insight Dashboard</h3>
-                        <p class="text-text-light leading-relaxed">
-                            Interactive Looker Studio dashboard for vehicle sales insights with regional maps, trend analysis, customer rankings, revenue shares, deal size distributions, and KPI-driven performance evaluation.
-                        </p>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="py-24 bg-gradient-to-br from-secondary-blue to-primary-blue" id="contact">
     <div class="max-w-4xl mx-auto px-5">
@@ -603,7 +602,7 @@ languages: {
     <!-- Footer -->
     <footer class="bg-text-dark text-white/80 text-center py-12">
         <div class="max-w-6xl mx-auto px-5">
-            <p>&copy; Crisceline Abella| Portofolio </p>
+            <p>&copy; Crisceline Abella | Portofolio </p>
         </div>
     </footer>
 
